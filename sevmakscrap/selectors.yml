@@ -1,0 +1,9 @@
+name:
+    css: '#productName'
+    type: Text
+price:
+    css: '.product-price'
+    type: Text
+nondiscountprice:
+    css: '.product-price-not-discounted'
+    type: Text
