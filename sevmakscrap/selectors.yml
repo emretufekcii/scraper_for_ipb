@@ -7,3 +7,4 @@ price:
 nondiscountprice:
     css: '.product-price-not-discounted'
     type: Text
+

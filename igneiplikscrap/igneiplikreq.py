@@ -3,6 +3,7 @@ from selectorlib import Extractor
 import requests 
 import json 
 from time import sleep
+import sys
  
 
 
@@ -40,11 +41,19 @@ def scrape(url):
 #ürünverisi
 with open("igneiplikscrap/ipburls.txt",'r') as urllist, open('igneiplikscrap/ipb_output.json','w') as outfile:
     for url in urllist.read().splitlines():
-        data = scrape(url) 
+        data = scrape(url)
         if data:
-            json.dump(data,outfile)
-            outfile.write("\n")
             
+         json.dump(data, outfile)
+         outfile.write("\n")
+
+##################################################################
+
+
+
+
+
+
             
 
 

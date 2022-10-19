@@ -1,9 +1,10 @@
 name:
-    css: '.productName'
+    css: '.ProductName'
     type: Text
-price:
-    css: '#indirimliFiyat > span.spanFiyat'
-    type: Text  
-nondiscountprice:
-    css: '#fiyat > span.spanFiyat'
+
+price:   
+    css: ' span.right_line.indirimliFiyat > span'
     type: Text
+
+
+

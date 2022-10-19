@@ -1,5 +1,4 @@
 from os import name
-from pandas import ExcelFile
 from selectorlib import Extractor
 import requests 
 import json 
@@ -30,10 +29,10 @@ def scrape(url):
     r = requests.get(url, headers=headers)
     # Sayfa bloklanmis mi kontrol et (Usually 503)
     if r.status_code > 500:
-        if "To discuss automated access to Amazon data please contact" in r.text:
-            print("Page %s was blocked by Amazon. Please try using better proxies\n"%url)
+        if "To discuss automated access to Website data please contact" in r.text:
+            print("Page %s was blocked by Website. Please try using better proxies\n"%url)
         else:
-            print("Page %s must have been blocked by Amazon as the status code was %d"%(url,r.status_code))
+            print("Page %s must have been blocked by Website as the status code was %d"%(url,r.status_code))
         return None
     # pass html  ve oluştur
     return e.extract(r.text)
@@ -44,9 +43,11 @@ with open("sevmakscrap/sevmakurls.txt",'r') as urllist, open('sevmakscrap/sevmak
         data = scrape(url) 
         if data:
             json.dump(data,outfile)
+             
             outfile.write("\n")
             
 
 
+    
 
           

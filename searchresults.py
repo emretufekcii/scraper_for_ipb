@@ -18,7 +18,7 @@ def scrape(url):
         'sec-fetch-mode': 'navigate',
         'sec-fetch-user': '?1',
         'sec-fetch-dest': 'document',
-        'referer': 'https://www.sevmak.com.tr/',
+        'referer': 'https://www.amazon.com.tr/',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
     }
 
